@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Love Calculator</title>
     <style>
-	body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-	background-position: center;
-        font-family: Arial, sans-serif;
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(img/f2.jpg); /*ruta de imagen jpg*/
+            background-size: cover;
+	    background-position: center;
+            font-family: Arial, sans-serif;
         }
         .calculator {
             background-color: #000;
@@ -51,7 +53,8 @@
         }
     </style>
 </head>
-<body>  
+<body>
+    
     <div class="calculator">
         <div class="screen" id="screen">0</div>
         <div class="buttons">
@@ -76,6 +79,7 @@
             <button class="equal" onclick="calculate()">=</button>
         </div>
     </div>
+
     <script>
         let screenValue = '0';
 
@@ -109,7 +113,7 @@
                         result = 'Mi Niña Hermosa 🧡';
                         break;
                     case /\*/.test(expression):
-                        result = 'Cásate Conmigo ';
+                        result = 'Cásate Conmigo 💍';
                         break;
                     case /\//.test(expression):
                         result = 'Gracias por esta en mi vida 💖';
@@ -123,8 +127,12 @@
             } catch (error) {
                 screenValue = 'Error';
                 updateScreen();
-            }
+            	}
         }
     </script>
+    <audio autoplay> 
+        <source src="audio/base.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audioooo.
+    </audio
 </body>
 </html>
